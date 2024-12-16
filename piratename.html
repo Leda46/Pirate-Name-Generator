@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Your Pirate Name?</title>
+  <style>
+    body {
+      font-family: "Treasure Map Deadhand", cursive;
+      background-color: #1b3b5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    input, button, select {
+      font-size: 16px;
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid #2a65a4;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #2a65a4;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3b89cf;
+    }
+    .result, .avatar {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    canvas {
+      border: 2px solid #3b89cf;
+      background-color: #f5f5f5;
+      margin: 10px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>What's Your Pirate Name?</h1>
+  <p>Answer the questions below to discover your pirate alter-ego!</p>
+
+  <!-- Inputs -->
+  <label for="realName">Enter your real name:</label>
+  <input type="text" id="realName" placeholder="Your name"><br>
+
+  <label for="favoriteColor">What's your favorite color?</label>
+  <input type="text" id="favoriteColor" placeholder="e.g., Red"><br>
+
+  <label for="favoriteAnimal">What's your favorite animal?</label>
+  <input type="text" id="favoriteAnimal" placeholder="e.g., Tiger"><br>
+
+  <label for="hatColor">Choose Hat Color:</label>
+  <input type="color" id="hatColor" value="#000000">
+
+  <label for="eyePatchColor">Eye Patch Color:</label>
+  <input type="color" id="eyePatchColor" value="#000000">
+
+  <label>
+    <input type="checkbox" id="toggleBeard" checked>
+    Show Beard
+  </label>
+  
+  <button onclick="generatePirateName()">Get Pirate Name</button>
+  
+
+  <!-- Avatar -->
+  <canvas id="pirateAvatar" width="200" height="200"></canvas>
+  <br>
+  <button onclick="drawAvatar()">Update Avatar</button>
+  <button onclick="downloadAvatar()">Download Avatar</button>
+  <!-- Result -->
+  <div class="result" id="result"></div>
+
+  <script src="piratename.js"></script>
+</body>
+</html>
+
