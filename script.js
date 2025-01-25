@@ -56,7 +56,7 @@ function drawAvatar() {
   // Clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    // Add crossed swords in the background (optional)
+    // Add crossed swords in the background
     ctx.strokeStyle = "#7e9cb6";
     ctx.lineWidth = 4;
     ctx.beginPath();
@@ -158,7 +158,7 @@ function drawAvatar() {
       ctx.fill();
     }  
 
-    // Add a smile (mouth)
+    // Add a smile
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
     ctx.beginPath();
